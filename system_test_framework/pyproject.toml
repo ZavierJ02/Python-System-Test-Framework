@@ -1,0 +1,25 @@
+[project]
+name = "system-test-framework"
+version = "0.1.0"
+requires-python = ">=3.11"
+dependencies = [
+  "pyyaml>=6.0",
+]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+addopts = [
+  "--timeout=10",
+  "--timeout-method=thread",
+  "--reruns=1",
+  "--reruns-delay=0.2",
+]

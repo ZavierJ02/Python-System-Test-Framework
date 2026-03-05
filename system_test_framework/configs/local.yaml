@@ -1,0 +1,5 @@
+env: sim
+logging:
+  level: INFO
+device:
+  boot_time_s: 2
